@@ -1,0 +1,11 @@
+:root {
+    /* Reference colors */
+    --blue-pantone: #3326AEff;
+    --red-ryb: #FF392Bff;
+    --ghost-white: #F7F8FFff;
+    --space-cadet: #2B2B4Cff;
+    --amber: #FFC005ff;
+    /* Custom colors*/
+    --white: #fff;
+    --white-transparent: #ffffff66;
+}
