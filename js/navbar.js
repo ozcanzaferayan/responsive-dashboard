@@ -1,16 +1,30 @@
-document.getElementById('nav-toggle').addEventListener('click', toggleNav);
+var mini = true;
+document.getElementById('expander').addEventListener('click', toggleSidebar);
+document.getElementsByClassName('navbar-nav')[0].addEventListener('click', changeTab);
 
-function toggleNav(e) {
-    let target = e.currentTarget;
-    let icon = target.firstChild;
-    let classList = ['icofont-rounded-double-right', 'icofont-rounded-double-left'];
-    let isShrinked = icon.classList.contains(classList[0]);
-    icon.classList = '';
-    icon.classList.add(isShrinked ? classList[1] : classList[0]);
-    document.querySelectorAll('.navbar span')
-        .forEach(x => {
-            x.className = '';
-            x.classList.add(isShrinked ? 'show' : 'hide')
-        });
+function toggleSidebar() {
+    if (mini) {
+        console.log("opening sidebar");
+        document.getElementsByTagName("body")[0].className = 'navbar-expanded';
+        mini = false;
+    } else {
+        console.log("closing sidebar");
+        document.getElementsByTagName("body")[0].className = 'navbar-shrinked';
+        mini = true;
+    }
+}
 
+function changeTab() {
+    let target = arguments[0].target;
+    let tagName = target.tagName;
+    let liElement;
+    if (tagName === "I") {
+        liElement = target.parentElement.parentElement;
+    } else if (tagName === "A") {
+        liElement = target.parentElement;
+    } else {
+        return;
+    }
+    [...liElement.parentElement.children].forEach(x => x.className = "");
+    liElement.classList.add('active');
 }

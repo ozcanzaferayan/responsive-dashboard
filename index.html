@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="./css/vendor/icofont/icofont.min.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/sizes.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/body.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+
     <nav class="navbar">
-        <a class="navbar-brand" href="#">
-            <div class="icon-container">
-                <i class="icofont-triangle"></i>
-            </div>
-            <span class="name">ResponsiPay</span>
-        </a>
+        <a href="#" class="navbar-brand"><i class="icofont-triangle"></i><span>ResPay</span></a>
         <ul class="navbar-nav">
+            <li class="active">
+                <a><i class="icofont-home"></i><span>Charts</span></a>
+            </li>
             <li>
-                <a class="active"><i class="icofont-pie-chart"></i><span>Charts</span></a>
+                <a><i class="icofont-pie-chart"></i><span>Charts</span></a>
             </li>
             <li>
                 <a><i class="icofont-ui-messaging"></i><span>Messages</span></a>
@@ -32,10 +32,34 @@
                 <a><i class="icofont-money"></i><span>Wallet</span></a>
             </li>
         </ul>
-        <div class="navbar-footer">
-            <a id="nav-toggle" class="shrinked"><i class="icofont-rounded-double-right"></i><span>Expand</span></a>
-        </div>
+        <a href="#" id="expander" class="navbar-footer"><i class="icofont-rounded-double-right"></i></a>
     </nav>
+
+    <main>
+        <header>
+            <section role="search">
+                <form action="#" method="get">
+                    <div class="form-inline">
+                        <i class="icofont-search"></i>
+                        <input type="search" placeholder="Search">
+                    </div>
+                </form>
+            </section>
+            <section role="application">
+                <nav class="navbar-top">
+                    <a href="#">Feedback</a>
+                    <a href="#">Contacts</a>
+                    <a href="#">Help</a>
+                </nav>
+                <div class="notification-profile">
+                    <a href="#" class="notification"><i class="icofont-alarm"></i></a>
+                    <a href="#">
+                        <div class="profile-pic"></div>
+                    </a>
+                </div>
+            </section>
+        </header>
+    </main>
     <script src="./js/navbar.js"></script>
 </body>
 

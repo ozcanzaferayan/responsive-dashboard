@@ -1,0 +1,18 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background: var(--blue-pantone);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}

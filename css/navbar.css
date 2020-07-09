@@ -1,50 +1,125 @@
+:root {
+    --navbar-expanded: 12.5em;
+    --navbar-shrinked: 5em;
+    --navbar-li-padding: 1.6em;
+    --navbar-li-padding-quarter: .8em;
+}
+
 .navbar {
-    background-color: var(--blue-pantone);
-    height: 100%;
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
     font-weight: 600;
+    height: 100%;
+    width: var(--navbar-shrinked);
+    position: fixed;
+    background-color: var(--blue-pantone);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    color: var(--white);
-    box-sizing: border-box;
-    min-width: 5em;
-    padding: 1em;
+    overflow-x: hidden;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.navbar li {
+    padding: var(--navbar-li-padding);
+}
+
+.navbar a {
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    color: var(--white-transparent);
 }
 
 .navbar i {
     font-size: 1.5rem;
 }
 
+.navbar a.navbar-brand {
+    color: var(--white);
+}
+
+.navbar a.navbar-brand,
+.navbar a.navbar-footer {
+    padding: var(--navbar-li-padding-quarter) var(--navbar-li-padding-quarter) var(--navbar-li-padding-quarter) var(--navbar-li-padding);
+}
+
+.navbar a:hover {
+    color: var(--white);
+}
+
 .navbar span {
-    margin-left: .5em;
+    margin-left: 2em;
+    font-size: 1rem;
+}
+
+.navbar-nav span {
+    vertical-align: middle;
+}
+
+main {
+    transition: margin-left 0.5s;
+    margin-left: var(--navbar-shrinked);
+}
+
+body.navbar-expanded .navbar {
+    width: var(--navbar-expanded);
+}
+
+body.navbar-expanded main {
+    margin-left: var(--navbar-expanded);
+}
+
+body.navbar-expanded li.active {
+    margin-left: 7.5em;
+    transition: .5s;
+}
+
+body.navbar-shrinked .navbar {
+    width: var(--navbar-shrinked);
+}
+
+body.navbar-shrinked main {
+    margin-left: var(--navbar-shrinked);
+}
+
+body.navbar-shrinked li.active {
+    margin-left: 0;
+    transition: .5s;
+}
+
+.navbar .active {
+    margin-bottom: 2em;
+    margin-top: -2em;
+}
+
+.navbar .active a {
+    position: fixed;
+    margin-left: 1em;
+    color: var(--red-ryb);
+    padding: 1em;
+    background-color: var(--white);
+    border-radius: 1em;
+    -webkit-box-shadow: .3em .3em 2em -.3em rgba(51, 38, 174, 0.21);
+    -moz-box-shadow: .3em .3em 2em -.3em rgba(51, 38, 174, 0.21);
+    box-shadow: .3em .3em 2em -.3em rgba(51, 38, 174, 0.21);
+}
+
+.navbar .active span {
     display: none;
 }
 
-.navbar span.show {
-    display: initial !important;
-}
-
-.navbar-brand {
-    text-decoration: none;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-}
-
-.navbar-nav a {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 2em;
-}
-
-.navbar-nav a:not(.active) {
-    color: var(--white-transparent);
-}
-
-.navbar-nav a:not(.active):hover {
-    color: var(--white);
+@media screen and (max-height: 450px) {
+    .navbar {
+        padding-top: 15px;
+    }
+    .navbar a {
+        font-size: 18px;
+    }
 }
