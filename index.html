@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/sizes.css">
     <link rel="stylesheet" href="./css/body.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -59,8 +60,124 @@
                 </div>
             </section>
         </header>
+        <div class="wrapper">
+            <section role="region">
+                <div class="info-box-container">
+                    <div class="info-box">
+                        <svg width="131" height="95" viewBox="0 0 131 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M126.202 30.503C100.847 39.2296 97.0315 2.99999 58.9733 3C26.6742 3 29.1336 43.4671 4.65875 54.8462V95H126.202V30.503Z"
+                                fill="#F1F3FF" />
+                            <path
+                                d="M1.74817 56.1231C29.0539 46.5109 25.2615 3.07825 58.6351 3.07825C98.456 3.07824 100.731 42.9509 129.554 29.0667"
+                                stroke="#3326AE" stroke-width="5" />
+                        </svg>
+                        <div class="info-content">
+                            <span class="header">visitors</span>
+                            <span class="value">10,320</span>
+                        </div>
+
+                    </div>
+                    <div class="info-box">
+                        <svg width="126" height="96" viewBox="0 0 126 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M47.1375 50.071C18.479 50.071 16.343 3.07825 0.678741 3.07825V95.2837H123.679V15.0044C123.679 15.0044 118.161 8.24033 105.522 8.24033C79.89 8.24033 75.796 50.071 47.1375 50.071Z"
+                                fill="#F1F3FF" />
+                            <path
+                                d="M0.678741 3.07825C16.343 3.07825 18.479 50.071 47.1375 50.071C75.796 50.071 79.89 8.24033 105.522 8.24033C118.161 8.24033 123.679 15.0044 123.679 15.0044"
+                                stroke="#3326AE" stroke-width="5" />
+                        </svg>
+
+                        <div class="info-content">
+                            <span class="header">customers</span>
+                            <span class="value">4,628</span>
+                        </div>
+
+                    </div>
+                    <div class="info-box active">
+
+                        <svg width="130" height="91" viewBox="0 0 130 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M103.579 21.0406C78.8364 21.0406 75.6324 0.570251 48.3979 0.570251C19.3288 0.570251 24.7401 23.1087 2.8292 24.3678V90.1057H125.295V14.0066C121.79 16.8538 114.739 21.0406 103.579 21.0406Z"
+                                fill="#F1F3FF" />
+                            <path
+                                d="M0.693176 27.0927C24.9016 27.0927 18.3155 3.2403 48.2199 3.2403C75.4544 3.2403 78.6584 23.7106 103.401 23.7106C120.311 23.7106 127.787 14.0985 127.787 14.0985"
+                                stroke="#3326AE" stroke-width="5" stroke-linejoin="bevel" />
+                        </svg>
+
+                        <div class="info-content">
+                            <span class="header">orders</span>
+                            <span class="value">2,980</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="statistics">
+                    <header>
+                        <h1>Statistics</h1>
+                        <select>
+                            <option value="Year">Year</option>
+                            <option value="Month">Month</option>
+                            <option value="Day">Day</option>
+                        </select>
+                    </header>
+                    <!-- For resizing issues -->
+                    <div class="chartContainer">
+                        <canvas id="statisticsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bottomBox">
+                    <div class="spentTime">
+                        <header>
+                            <h1>Spent time</h1>
+                        </header>
+                        <!-- For resizing issues -->
+                        <div class="chartContainer">
+                            <canvas id="spentTimeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="profileContainer">
+                            <div class="profileImage"></div>
+                            <div class="profileInfo">
+                                <span class="name">Lilly Danovan</span>
+                                <span class="title">Businness trainer</span>
+                            </div>
+                        </div>
+                        <h1>How to properly manage your personal budget?</h1>
+                        <div class="badgesContainer">
+                            <div class="tweetBadge">
+                                <i class="icofont-play-alt-1"></i><span>Video</span>
+                            </div>
+                            <div class="tweetBadge">
+                                <i class="icofont-clock-time"></i><span>15 mins</span>
+                            </div>
+                            <div class="tweetBadge">
+                                <i class="icofont-star"></i><span>12 likes</span>
+                            </div>
+                        </div>
+                        <div class="tweetBottomContainer">
+                            <span class="time">5 days ago</span>
+                            <a href="#" class="connect">Connect<i class="icofont-rounded-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <aside>
+                My card
+            </aside>
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.js"></script>
+    <script src="https://cdn.rawgit.com/chartjs/Chart.js/master/samples/utils.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="./js/infoBox.js"></script>
+    <script src="./js/statistics.js"></script>
+    <script src="./js/spentTime.js"></script>
 </body>
 
 </html>

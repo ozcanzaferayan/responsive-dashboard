@@ -9,4 +9,10 @@
     --white: #fff;
     --white-transparent: #ffffff66;
     --space-cadet-transparent: #2B2B4Cbb;
+    --placeholder: #cbcde4;
+    --ghost-white-text: #c3c6deff;
+    /* Tweet buttons */
+    --video: var(--blue-pantone);
+    --duration: #00c3f8;
+    --likes: var(--red-ryb);
 }

@@ -1,0 +1,80 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+section[role="search"] {
+    background-color: var(--ghost-white);
+    padding: 1em 1.2em;
+    border-radius: 1em;
+    font-size: .75rem;
+    width: 100%;
+}
+
+section[role="search"] input {
+    border: none;
+    background: none;
+    margin-left: 0.5em;
+    outline: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+section[role="search"] input::placeholder {
+    color: var(--placeholder);
+}
+
+section[role="search"] i {
+    color: var(--blue-pantone);
+    font-weight: bold;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+section[role="application"] {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.navbar-top a {
+    text-decoration: none;
+    color: var(--space-cadet);
+    font-weight: 600;
+    margin-left: 2em;
+    font-size: 1rem;
+}
+
+.notification-profile {
+    display: flex;
+    align-items: center;
+}
+
+.notification-profile a {
+    text-decoration: none;
+    color: var(--space-cadet-transparent);
+}
+
+.notification-profile i {
+    font-size: 1.1rem;
+}
+
+.notification-profile .profile-pic {
+    background-image: url('../img/portrait_man.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -.5em;
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: .5em;
+}
+
+.notification-profile .notification {
+    margin-right: 1.5em;
+}
