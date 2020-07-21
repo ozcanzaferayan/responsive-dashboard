@@ -1,6 +1,5 @@
 main {
     background-color: var(--white);
-    height: 100%;
     border-radius: 3em 0 0 3em;
     padding: 3em;
 }
@@ -13,12 +12,6 @@ main {
 section[role="region"] {
     height: 100%;
     width: 100%;
-}
-
-aside {
-    background-color: var(--ghost-white);
-    height: 100%;
-    width: 15em;
 }
 
 .info-box-container {
@@ -143,7 +136,6 @@ aside {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 1em;
 }
 
 .bottomBox h1 {
@@ -198,7 +190,7 @@ aside {
 }
 
 .tweet .profileInfo .title {
-    margin-top: .3em;
+    margin-top: .5em;
     font-size: .75rem;
     color: var(--ghost-white-text);
 }
@@ -254,4 +246,8 @@ aside {
 
 .tweetBottomContainer a i {
     margin-left: 1em;
+}
+
+.chartContainer {
+    height: 8em;
 }

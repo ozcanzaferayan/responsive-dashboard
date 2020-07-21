@@ -1,0 +1,98 @@
+aside {
+    background-color: var(--ghost-white);
+    height: 100%;
+    width: 15em;
+    padding: 1em;
+}
+
+.editContainer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.editContainer i {
+    color: var(--ghost-white-text);
+}
+
+aside .chartContainer {
+    margin-top: 2em;
+    display: flex;
+}
+
+aside .chartContainer span {
+    background-color: var(--blue-pantone);
+    color: var(--white);
+    height: fit-content;
+    font-size: .75rem;
+    padding: 1em;
+    position: relative;
+    margin-left: -2rem;
+    border-radius: .5em;
+    -webkit-box-shadow: 0px 5px 9px 0px rgba(51, 38, 174, .3);
+    -moz-box-shadow: 0px 5px 9px 0px rgba(51, 38, 174, .3);
+    box-shadow: 0px 5px 9px 0px rgba(51, 38, 174, .3);
+}
+
+#asideChart {
+    /* background-color: var(--white); */
+}
+
+.cardContainer {
+    margin-top: 2em;
+}
+
+aside .header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    align-items: center;
+}
+
+aside .header.transaction span {
+    font-size: 1rem;
+    padding: .4em .5em;
+    border-radius: .5em;
+    color: var(--white);
+    background-color: var(--red-ryb);
+}
+
+aside .header.transaction {
+    margin-bottom: 1em;
+}
+
+.transactionItem {
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.transactionItem .imgItemContainer {
+    display: flex;
+}
+
+.transactionItem i {
+    color: var(--red-ryb);
+}
+
+.transactionItem .iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .7em;
+    background-color: var(--white);
+    border-radius: .5em;
+    margin-right: 1em;
+}
+
+.transactionItem .spendItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.transactionItem .spendItem .date {
+    color: var(--ghost-white-text);
+    margin-top: .5em;
+}

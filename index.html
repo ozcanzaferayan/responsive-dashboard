@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/aside.css">
 </head>
 
 <body>
@@ -133,7 +134,7 @@
                         </header>
                         <!-- For resizing issues -->
                         <div class="chartContainer">
-                            <canvas id="spentTimeChart"></canvas>
+                            <canvas id="spentTimeChart" style="background-color: rgba(0,0,0, .0);"></canvas>
                         </div>
                     </div>
                     <div class="tweet">
@@ -167,7 +168,63 @@
 
 
             <aside>
-                My card
+                <div class="editContainer">
+                    <a><i class="icofont-edit"></i></a>
+                </div>
+
+                <!-- For resizing issues -->
+                <div class="chartContainer">
+                    <canvas id="asideChart"></canvas>
+                    <span>$10,600</span>
+                </div>
+
+                <div class="header">
+                    <h1>My card</h1>
+                    <i>..</i>
+                </div>
+                <div class="cardContainer">
+                    <h1>My card</h1>
+                </div>
+                <div class="header transaction">
+                    <h1>Transaction</h1>
+                    <span>+</span>
+                </div>
+                <div class="transactionItem">
+                    <div class="imgItemContainer">
+                        <div class="iconContainer">
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div class="spendItem">
+                            <span class="name">Taxi</span>
+                            <span class="date">01:21 PM</span>
+                        </div>
+                    </div>
+                    <span class="spendMoney">-$9,20</span>
+                </div>
+                <div class="transactionItem">
+                    <div class="imgItemContainer">
+                        <div class="iconContainer">
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div class="spendItem">
+                            <span class="name">Taxi</span>
+                            <span class="date">01:21 PM</span>
+                        </div>
+                    </div>
+                    <span class="spendMoney">-$9,20</span>
+                </div>
+                <div class="transactionItem">
+                    <div class="imgItemContainer">
+                        <div class="iconContainer">
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div class="spendItem">
+                            <span class="name">Taxi</span>
+                            <span class="date">01:21 PM</span>
+                        </div>
+                    </div>
+                    <span class="spendMoney">-$9,20</span>
+                </div>
             </aside>
         </div>
     </main>
@@ -178,6 +235,7 @@
     <script src="./js/infoBox.js"></script>
     <script src="./js/statistics.js"></script>
     <script src="./js/spentTime.js"></script>
+    <script src="./js/asideChart.js"></script>
 </body>
 
 </html>

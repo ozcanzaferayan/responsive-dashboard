@@ -28,54 +28,72 @@ var options = {
     legend: {
         display: false
     },
-    plugins: {
-        annotation: {
-            // Defines when the annotations are drawn.
-            // This allows positioning of the annotation relative to the other
-            // elements of the graph.
-            //
-            // Should be one of: afterDraw, afterDatasetsDraw, beforeDatasetsDraw
-            // See http://www.chartjs.org/docs/#advanced-usage-creating-plugins
-            drawTime: 'afterDatasetsDraw', // (default)
-
-            // Mouse events to enable on each annotation.
-            // Should be an array of one or more browser-supported mouse events
-            // See https://developer.mozilla.org/en-US/docs/Web/Events
-            events: ['click'],
-
-            // Double-click speed in ms used to distinguish single-clicks from
-            // double-clicks whenever you need to capture both. When listening for
-            // both click and dblclick, click events will be delayed by this
-            // amount.
-            dblClickSpeed: 350, // ms (default)
-
-            // Array of annotation configuration objects
-            // See below for detailed descriptions of the annotation options
-            annotations: [{
-                drawTime: 'afterDraw', // overrides annotation.drawTime if set
-                id: 'a-line-1', // optional
-                type: 'line',
-                mode: 'horizontal',
-                scaleID: 'y-axis-0',
-                value: '25',
-                borderColor: 'red',
-                borderWidth: 2,
-
-                // Fires when the user clicks this annotation on the chart
-                // (be sure to enable the event in the events array below).
-                onClick: function(e) {
-                    // `this` is bound to the annotation element
-                }
-            }]
+    tooltips: {
+        mode: 'index',
+        intersect: true,
+        yPadding: 10,
+        xPadding: 10,
+        caretSize: 8,
+        backgroundColor: 'rgba(255,57,43, 1)',
+        titleFontColor: "#fff",
+        bodyFontStyle: 'bold',
+        bodyFontColor: "#fff",
+        displayColors: false,
+        callbacks: {
+            label: function(tooltipItems, data) {
+                return "4h 26 min";
+            }
         }
     },
+    showAllTooltips: true,
+
+    // annotation: {
+    //     events: ["click"],
+    //     annotations: [{
+    //             drawTime: "afterDatasetsDraw",
+    //             id: "hline",
+    //             type: "line",
+    //             mode: "horizontal",
+    //             scaleID: "y-axis-0",
+    //             value: 13,
+    //             borderColor: "#000",
+    //             borderWidth: 1,
+    //             label: {
+    //                 backgroundColor: "red",
+    //                 content: "Test Label",
+    //                 enabled: true,
+    //                 position: "center",
+    //                 xAdjust: 100,
+    //             },
+    //             onClick: function(e) {
+    //                 // The annotation is is bound to the `this` variable
+    //                 console.log("Annotation", e.type, this);
+    //             }
+    //         }
+    //         //     {
+    //         //     drawTime: "beforeDatasetsDraw",
+    //         //     type: "box",
+    //         //     xScaleID: "x-axis-0",
+    //         //     yScaleID: "y-axis-0",
+    //         //     xMin: "Thu",
+    //         //     xMax: "Sat",
+    //         //     yMin: 13,
+    //         //     yMax: 15,
+    //         //     backgroundColor: "rgba(101, 33, 171, 0.5)",
+    //         //     borderColor: "rgb(101, 33, 171)",
+    //         //     borderWidth: 1,
+    //         //     onClick: function(e) {
+    //         //         console.log("Box", e.type, this);
+    //         //     }
+    //         // }
+    //     ]
+    // },
     scales: {
         yAxes: [{
             display: false,
             ticks: {
                 maxTicksLimit: 5,
                 min: 0,
-                max: 16
             }
         }],
         xAxes: [{
@@ -96,6 +114,52 @@ var options = {
     }
 };
 
+
+Chart.pluginService.register({
+    beforeRender: function(chart) {
+        if (chart.config.options.showAllTooltips) {
+            // create an array of tooltips
+            // we can't use the chart tooltip because there is only one tooltip per chart
+            chart.pluginTooltips = [];
+            chart.config.data.datasets.forEach(function(dataset, i) {
+                chart.getDatasetMeta(i).data.forEach(function(sector, j) {
+                    chart.pluginTooltips.push(new Chart.Tooltip({
+                        _chart: chart.chart,
+                        _chartInstance: chart,
+                        _data: chart.data,
+                        _options: chart.options.tooltips,
+                        _active: [sector]
+                    }, chart));
+                });
+            });
+
+            // turn off normal tooltips
+            chart.options.tooltips.enabled = false;
+        }
+    },
+    afterDraw: function(chart, easing) {
+        if (chart.config.options.showAllTooltips) {
+            // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+            if (!chart.allTooltipsOnce) {
+                if (easing !== 1)
+                    return;
+                chart.allTooltipsOnce = true;
+            }
+
+            // turn on tooltips
+            chart.options.tooltips.enabled = true;
+            Chart.helpers.each(chart.pluginTooltips, function(tooltip, i) {
+                if (i !== 6) return;
+                tooltip.initialize();
+                tooltip.update();
+                // we don't actually need this since we are not animating tooltips
+                tooltip.pivot();
+                tooltip.transition(easing).draw();
+            });
+            chart.options.tooltips.enabled = false;
+        }
+    }
+});
 
 var ctx = document.getElementById('spentTimeChart').getContext('2d');
 var myLineChart = new Chart(ctx, {

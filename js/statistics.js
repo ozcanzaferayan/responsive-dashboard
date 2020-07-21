@@ -1,55 +1,46 @@
 var data = {
-    labels: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+    labels: ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [{
-        backgroundColor: "rgba(0,0,0,0)",
-        borderColor: "rgba(91,37,245, 1)",
-        borderWidth: 4.5,
-        data: [10.2, 10, 13, 12, 15, 13, 14.5, 11, 13.5, 13, 11],
-    }]
+        label: 'Spending',
+        backgroundColor: "rgb(51, 38, 174)",
+        data: [500, 300, 800, 150, 200, 150, 800, 200, 800, 100],
+    }, {
+        label: 'Arrival',
+        backgroundColor: "rgb(51, 38, 174)",
+        data: [1000, 800, 1800, 1100, 1000, 800, 1800, 1600, 1800, 1200],
+    }, ]
 };
 
 var options = {
-    responsive: true,
+    cornerRadius: 0,
     maintainAspectRatio: false,
     legend: {
-        display: false
+        display: false,
+        position: 'bottom',
+        labels: {
+            fontColor: "rgba(0,0,0, 0.5)",
+            boxWidth: 10,
+            padding: 10
+        }
     },
     scales: {
         yAxes: [{
-            stacked: true,
             gridLines: {
                 display: true,
                 color: "rgba(91,37,245, 0.03)"
             },
             ticks: {
                 maxTicksLimit: 5,
-                min: 9,
-                max: 16,
-                fontSize: 12,
-                fontColor: '#c3c6de'
             }
         }],
-        xAxes: [{
-            gridLines: {
-                display: false
-            },
-            ticks: {
-                fontSize: 12,
-                fontColor: '#c3c6de'
-            },
-        }]
-    },
-    elements: {
-        point: {
-            radius: 0
-        }
+        xAxes: [{}]
     }
 };
 
 
 var ctx = document.getElementById('statisticsChart').getContext('2d');
 var myLineChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: data,
     options: options
 });
