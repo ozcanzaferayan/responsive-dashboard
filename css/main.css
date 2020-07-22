@@ -413,7 +413,6 @@ section[role="region"] {
         margin: 0;
         flex-direction: row;
         height: 2.75em;
-        overflow: hidden;
     }
     .navbar-nav {
         display: flex;
