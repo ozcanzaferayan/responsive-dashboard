@@ -1,0 +1,24 @@
+{
+  "name": "responsive-dashboard-animation-design",
+  "version": "1.0.0",
+  "description": "Responsive dashboard implementation based on https://dribbble.com/shots/9963575-Responsive-Dashboard-animation-design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozcanzaferayan/responsive-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozcanzaferayan/responsive-dashboard/issues"
+  },
+  "homepage": "https://github.com/ozcanzaferayan/responsive-dashboard#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-favicons": "^2.4.0"
+  }
+}

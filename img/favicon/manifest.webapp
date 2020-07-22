@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Responsive Dashboard",
+  "description": "Responsive dashboard implementation based on https://dribbble.com/shots/9963575-Responsive-Dashboard-animation-design",
+  "icons": {
+    "60": "img/favicon/firefox_app_60x60.png",
+    "128": "img/favicon/firefox_app_128x128.png",
+    "512": "img/favicon/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Zafer AYAN",
+    "url": "https://twitter.com/ZaferAyan"
+  }
+}
