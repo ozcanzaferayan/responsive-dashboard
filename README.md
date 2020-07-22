@@ -4,7 +4,7 @@ Responsive dashboard implementation based on https://dribbble.com/shots/9963575-
 
 ## Social media preview
 
-![Social media preview](https://raw.githubusercontent.com/ozcanzaferayan/financial-crm/master/art/social/social.png)
+![Social media preview](https://raw.githubusercontent.com/ozcanzaferayan/responsive-dashboard/master/art/social/social.png)
 
 ## Screenshot
 
