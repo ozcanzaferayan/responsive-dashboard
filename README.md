@@ -8,6 +8,10 @@ Responsive dashboard implementation based on https://dribbble.com/shots/9963575-
 
 ## Screenshots
 
+### Desktop UI
+
 ![Screenshot](https://raw.githubusercontent.com/ozcanzaferayan/responsive-dashboard/master/art/screenshots/screenshot.png)
+
+### Mobile UI
 
 ![Screenshot](https://raw.githubusercontent.com/ozcanzaferayan/responsive-dashboard/master/art/screenshots/screenshot2.png)
