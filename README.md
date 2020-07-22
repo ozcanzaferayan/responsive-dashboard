@@ -6,6 +6,8 @@ Responsive dashboard implementation based on https://dribbble.com/shots/9963575-
 
 ![Social media preview](https://raw.githubusercontent.com/ozcanzaferayan/responsive-dashboard/master/art/social/social.png)
 
-## Screenshot
+## Screenshots
 
 ![Screenshot](https://raw.githubusercontent.com/ozcanzaferayan/responsive-dashboard/master/art/screenshots/screenshot.png)
+
+![Screenshot](https://raw.githubusercontent.com/ozcanzaferayan/responsive-dashboard/master/art/screenshots/screenshot2.png)
