@@ -1,14 +1,21 @@
 var data = {
     labels: ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [{
-        label: 'Spending',
-        backgroundColor: "rgb(51, 38, 174)",
-        data: [500, 300, 800, 150, 200, 150, 800, 200, 800, 100],
-    }, {
-        label: 'Arrival',
-        backgroundColor: "rgb(51, 38, 174)",
-        data: [1000, 800, 1800, 1100, 1000, 800, 1800, 1600, 1800, 1200],
-    }, ]
+            label: 'A',
+            backgroundColor: "rgb(51, 38, 174)",
+            data: [500, 300, 800, 150, 200, 150, 800, 200, 800, 100],
+        },
+        {
+            label: 'B',
+            backgroundColor: "rgb(51, 38, 174)",
+            data: [300, 400, 150, 200, 100, 500, 400, 350, 700, 200],
+        },
+        {
+            label: 'C',
+            backgroundColor: "rgb(51, 38, 174)",
+            data: [450, 700, 300, 650, 150, 300, 600, 450, 835, 75],
+        },
+    ]
 };
 
 var options = {
@@ -19,21 +26,23 @@ var options = {
         position: 'bottom',
         labels: {
             fontColor: "rgba(0,0,0, 0.5)",
-            boxWidth: 10,
-            padding: 10
         }
     },
     scales: {
         yAxes: [{
             gridLines: {
-                display: true,
-                color: "rgba(91,37,245, 0.03)"
+                display: false,
             },
             ticks: {
                 maxTicksLimit: 5,
             }
         }],
-        xAxes: [{}]
+        xAxes: [{
+            barPercentage: 0.25,
+            gridLines: {
+                display: false,
+            },
+        }]
     }
 };
 

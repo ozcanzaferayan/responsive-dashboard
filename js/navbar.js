@@ -18,7 +18,7 @@ function changeTab() {
     let target = arguments[0].target;
     let tagName = target.tagName;
     let liElement;
-    if (tagName === "I") {
+    if (tagName === "I" || tagName === "SPAN") {
         liElement = target.parentElement.parentElement;
     } else if (tagName === "A") {
         liElement = target.parentElement;

@@ -94,6 +94,9 @@ var options = {
             ticks: {
                 maxTicksLimit: 5,
                 min: 0,
+            },
+            gridLines: {
+                display: false
             }
         }],
         xAxes: [{

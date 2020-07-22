@@ -6,7 +6,6 @@ body {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
-    background: var(--blue-pantone);
 }
 
 * {

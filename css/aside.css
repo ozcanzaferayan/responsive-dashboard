@@ -3,6 +3,7 @@ aside {
     height: 100%;
     width: 15em;
     padding: 1em;
+    border-radius: 1em;
 }
 
 .editContainer {
@@ -16,8 +17,7 @@ aside {
 }
 
 aside .chartContainer {
-    margin-top: 2em;
-    display: flex;
+    margin-top: 0em;
 }
 
 aside .chartContainer span {
@@ -25,9 +25,11 @@ aside .chartContainer span {
     color: var(--white);
     height: fit-content;
     font-size: .75rem;
-    padding: 1em;
+    padding: 1.25em 1.7em;
     position: relative;
-    margin-left: -2rem;
+    float: right;
+    top: 4em;
+    margin-right: -4em;
     border-radius: .5em;
     -webkit-box-shadow: 0px 5px 9px 0px rgba(51, 38, 174, .3);
     -moz-box-shadow: 0px 5px 9px 0px rgba(51, 38, 174, .3);
@@ -39,26 +41,29 @@ aside .chartContainer span {
 }
 
 .cardContainer {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 aside .header {
     display: flex;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 3em;
     align-items: center;
+    font-weight: 600;
 }
 
-aside .header.transaction span {
+aside .header.transaction a {
     font-size: 1rem;
     padding: .4em .5em;
     border-radius: .5em;
     color: var(--white);
     background-color: var(--red-ryb);
+    text-decoration: none;
 }
 
 aside .header.transaction {
     margin-bottom: 1em;
+    margin-top: 0;
 }
 
 .transactionItem {
@@ -95,4 +100,12 @@ aside .header.transaction {
 .transactionItem .spendItem .date {
     color: var(--ghost-white-text);
     margin-top: .5em;
+}
+
+.transactionItem .spendItem .name {
+    font-weight: 600;
+}
+
+.transactionItem .spendMoney {
+    font-weight: 600;
 }
