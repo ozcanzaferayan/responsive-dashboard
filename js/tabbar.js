@@ -1,6 +1,5 @@
 document.getElementsByClassName('tab')[0].addEventListener('click', changeTab);
 var activeTab = 'tabCharts';
-document.getElementById(activeTab).click();
 
 function changeTab() {
     let target = arguments[0].target;
